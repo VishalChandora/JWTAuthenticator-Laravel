@@ -98,6 +98,17 @@ Open `User.php` and implement JWTSubject:
 ```php
 class User extends Authenticatable implements JWTSubject {
     // Add methods getJWTIdentifier() and getJWTCustomClaims() here
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+
 }
 ```
 
