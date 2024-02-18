@@ -96,6 +96,8 @@ Open `auth.php` and add JWT guard:
 Open `User.php` and implement JWTSubject:
 
 ```php
+use Tymon\JWTAuth\Contracts\JWTSubject;
+
 class User extends Authenticatable implements JWTSubject {
     // Add methods getJWTIdentifier() and getJWTCustomClaims() here
 
